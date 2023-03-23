@@ -1,37 +1,32 @@
-
-.container{
+.container {
   width: 80%;
   height: 90%;
   border: 5px solid #00bfff;
   border-radius: 5%;
-  /* margin: 10px 20px; */
-  /* margin-bottom: 50%; */
   background-color: aliceblue;
-  /* padding: 20px; */
   padding: 0 20px;
   display: grid;
   justify-content: center;
   align-content: center;
   grid-template-areas:
-  "close close close"
-  "image image image"
-  "name name name"
-  "origin origin origin"
-  "species gender status";
-  
+    "close close close"
+    "image image image"
+    "name name name"
+    "origin origin origin"
+    "species gender status";
 }
-.close{
+.close {
   grid-area: close;
   width: 10%;
   height: 100%;
-  margin: 3%  0;
+  margin: 3% 0;
   z-index: 2;
   border: 1px solid #00bfff;
   border-radius: 5%;
   font-weight: bold;
-  background-color:  #00bfff;
+  background-color: #00bfff;
 }
-.image{
+.image {
   grid-area: image;
   border-radius: 50%;
   border: 5px solid #000;
@@ -40,33 +35,33 @@
   align-self: center;
   margin: 0 auto;
 }
-.image:hover{
+.image:hover {
   transform: scale(1.2);
-  border: 5px solid  #000033;
+  border: 5px solid #000033;
 }
-.name{
+.name {
   grid-area: name;
-  font-family: "Bebas Neue" ;
+  font-family: "Bebas Neue";
 }
-.origin{
+.origin {
   grid-area: origin;
   font-family: "Delicious Handrawn";
   margin: 1px;
   padding-bottom: 10px;
 }
-.species{
+.species {
   grid-area: species;
   font-family: "Delicious Handrawn";
   margin: 1px;
   padding-bottom: 30px;
 }
-.gender{
+.gender {
   grid-area: gender;
   font-family: "Delicious Handrawn";
   margin: 1px;
   padding-bottom: 30px;
 }
-.status{
+.status {
   grid-area: status;
   font-family: "Delicious Handrawn";
   margin: 1px;

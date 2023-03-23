@@ -1,19 +1,13 @@
-.btnSearch{
-    margin-top: 2%;
-    background-color: #00bfff;
-    border-radius: 5%;
-    font-size: medium;
+.btnSearch {
+  margin-top: 2%;
+  background-color: #00bfff;
+  border-radius: 5%;
+  font-size: medium;
 }
-.containerSearch{
-    grid-area: containerSearch;
-   /* background-color: #002266;
-   height: 50px;
-   margin-bottom: 20px; */
-} 
-.inputSearch{
-    margin-top: 2%;
-    border-radius: 5%;
+.containerSearch {
+  grid-area: containerSearch;
 }
-
-  
-  
+.inputSearch {
+  margin-top: 2%;
+  border-radius: 5%;
+}
