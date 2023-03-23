@@ -1,8 +1,12 @@
 import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
 import Cards from "./components/cards/Cards.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
+import Login  from "./components/login/Login";
+import About from "./components/about/About";
+import Detail from "./components/detail/Detail";
 
 function App() {
   const url = "https://rickandmortyapi.com/api/character";
@@ -41,7 +45,15 @@ function App() {
   return (
     <div className="App">
       <NavBar onSearch={onSearch} onGetRandom={onGetRandom} />
-      <Cards characters={characters} onClose={onClose} />
+      <Routes>
+        <Route path="/" element ={<Login/>}></Route>
+        <Route path="/home" element ={
+         <Cards characters={characters} onClose={onClose} />
+         }></Route>
+        <Route path="/about" element ={<About/>}></Route>
+        <Route path="/detail/:id" element ={<Detail/>}></Route>
+      </Routes>
+     
     </div>
   );
 }
