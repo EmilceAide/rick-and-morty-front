@@ -1,0 +1,17 @@
+.btnRandom{
+    grid-area: btnRandom;
+    background-color: #00bfff;
+    border-radius: 5%;
+    font-size: medium; 
+    width: 10%;
+    height: 70%;
+    margin-top: 2%;
+}
+.container{
+    display: grid;
+    grid-template-areas:  "containerSearch btnRandom";
+    background-color: #002266;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
