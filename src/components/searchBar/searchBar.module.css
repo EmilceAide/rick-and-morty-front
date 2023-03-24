@@ -1,13 +1,16 @@
 .btnSearch {
-  margin-top: 2%;
-  background-color: #00bfff;
+  background-color: #04698a;
   border-radius: 5%;
-  font-size: medium;
+  font-size: 1.2em
+}
+.btnSearch:hover{
+  background-color: #00bfff
 }
 .containerSearch {
   grid-area: containerSearch;
 }
 .inputSearch {
-  margin-top: 2%;
-  border-radius: 5%;
+  font-size: 1.2em;
+  border-style: none;
+  border: 1px solid #727778;
 }

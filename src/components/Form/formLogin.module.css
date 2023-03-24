@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2307caf5' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  width: 50%;
+  height: 60%;
+  padding: 100px 0;
+  cursor:pointer;
+
+  box-shadow:
+  inset 0 -3em 3em rgba(0,0,0,0.1),
+        0 0  0 2px  #e6faff,
+        0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.title{
+  width: 30%;
+}
+.title:hover{
+  transform: skew(15deg)
+}
+.logo {
+  width: 50%;
+  transform: rotate(-10deg);
+  cursor:pointer;
+}
+.logo:hover{
+  transform: rotate(5deg)
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+.form:hover{
+  transform: scale(1.2)
+}
+.inputPass,
+.inputEmail{
+    font-size: 1.2em;
+    border-style: none;
+    border: 1px solid #6af1f8;
+}
+/* .email{
+}
+.password{
+}*/

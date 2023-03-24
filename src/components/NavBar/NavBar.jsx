@@ -6,20 +6,29 @@ import styles from "./navBar.module.css";
 const NavBar = ({ onSearch, onGetRandom, logout }) => {
   return (
     <div className={styles.container}>
-      <Link to="/home">
-        <button> Home </button>
-      </Link>
-      <Link to="/about">
-        <button>About</button>
-      </Link>
-      <SearchBar onSearch={onSearch} />
+
+      <div className={styles.contentOne}>
+      </div>
+
+      <div className={styles.contentTwo}>
       <button
         onClick={() => onGetRandom(1, 826, onSearch)}
         className={styles.btnRandom}
-      >
+        >
         Agregar
       </button>
-      <button onClick={logout}> Cerrar Sesión </button>
+      <SearchBar onSearch={onSearch} />
+      <Link to="/home">
+        <button className={styles.btn}> HOME </button>
+      </Link>
+       <Link>
+        <button className={styles.btn}>ABOUT</button >
+      </Link>
+      <Link to="/">
+      <button onClick={logout} className={styles.btn}> CERRAR SESION </button>
+      </Link>
+      </div>
+        
     </div>
   );
 };

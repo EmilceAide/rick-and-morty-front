@@ -1,0 +1,48 @@
+.container{
+  width: 25%;
+  height: 90%;
+  margin: 0 auto ;
+  border: 5px solid #00bfff;
+  border-radius: 5%;
+  background-color: aliceblue;
+  padding: 0 20px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-areas: 
+  "name name"
+  "image origin"
+  "image species"
+  "status gender";
+}
+.image{
+    grid-area: image;
+    width: 60%;
+    border-radius: 30%;
+    border: 3px solid #000;
+}
+.origin{
+    grid-area: origin;
+    font-family: "Delicious Handrawn";
+    font-size: 1.5em;
+}
+.species{
+    grid-area: species;
+    font-family: "Delicious Handrawn";
+    font-size: 1.5em;
+}
+.gender{
+    grid-area: gender;
+    font-family: "Delicious Handrawn";
+    font-size: 1.5em;
+}
+.name{
+    grid-area: name;
+    font-family: "Bebas Neue";
+    font-size: 2em;
+}
+.status{
+    grid-area: status;
+    font-family: "Delicious Handrawn";
+    font-size: 1.5em;
+}

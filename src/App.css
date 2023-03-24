@@ -1,4 +1,8 @@
 .App {
-   text-align: center;
-   background-color: #000033
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
 }

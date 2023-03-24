@@ -16,6 +16,7 @@
     "species gender status";
 }
 .close {
+  cursor: pointer;
   grid-area: close;
   width: 10%;
   height: 100%;

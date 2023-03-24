@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar.jsx";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import FormLogin from "./components/Form/FormLogin";
+// import Footer from "./components/Footer/Footer";
 
 function App() {
   const url = "https://rickandmortyapi.com/api/character";
@@ -77,6 +78,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:id" element={<Detail url={url} />}></Route>
       </Routes>
+      {/* <Footer/> */}
     </div>
   );
 }
