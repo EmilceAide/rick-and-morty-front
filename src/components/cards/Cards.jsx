@@ -1,4 +1,4 @@
-import Card from "../card/Card";
+import Card from "../Card/Card";
 import styles from "./cards.module.css";
 
 const Cards = ({ characters, onClose }) => {

@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "../searchBar/SearchBar.jsx";
+import SearchBar from "../SearchBar/SearchBar.jsx";
 import styles from "./navBar.module.css";
 
-const NavBar = ({ onSearch, onGetRandom }) => {
+const NavBar = ({ onSearch, onGetRandom, logout }) => {
   return (
     <div className={styles.container}>
-        <Link to="/home">
-            <button> Home </button>
-        </Link>
-        <Link to="/about" >
-            <button>About</button>
-        </Link>
+      <Link to="/home">
+        <button> Home </button>
+      </Link>
+      <Link to="/about">
+        <button>About</button>
+      </Link>
       <SearchBar onSearch={onSearch} />
       <button
         onClick={() => onGetRandom(1, 826, onSearch)}
@@ -19,6 +19,7 @@ const NavBar = ({ onSearch, onGetRandom }) => {
       >
         Agregar
       </button>
+      <button onClick={logout}> Cerrar Sesión </button>
     </div>
   );
 };

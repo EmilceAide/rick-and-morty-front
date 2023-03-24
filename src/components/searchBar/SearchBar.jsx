@@ -5,8 +5,6 @@ const SearchBar = ({ onSearch }) => {
   const [id, setId] = useState("");
 
   const handleChange = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
     setId(e.target.value);
   };
 
