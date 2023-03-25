@@ -15,14 +15,19 @@ const Card = ({
   onClose,
 }) => {
   const dispatch = useDispatch();
-  const favorites = useSelector(state => state.myFavorites)
+  const {myFavorites}= useSelector(state => state)
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavorite = () => {
     if (isFavorite) {
+      console.log(isFavorite)
       setIsFavorite(false);
       dispatch(deleteFavorite(id));
-    } else {
+    } 
+  };
+
+  const handleTrueFav =() =>{
+  if(!isFavorite){
       setIsFavorite(true);
       dispatch(
         addFavorite({
@@ -37,22 +42,22 @@ const Card = ({
         })
       );
     }
-  };
+  }
 
   useEffect(() => {
-   favorites.forEach((fav) => {
+   myFavorites.map((fav) => {
       if(fav.id === id) {
          setIsFavorite(true);
       }
    });
-}, [favorites]);
+}, [myFavorites]);
 
   return (
     <div className={styles.container}>
       {isFavorite ? (
         <button onClick={handleFavorite}>❤️</button>
       ) : (
-        <button onClick={handleFavorite}>🤍</button>
+        <button onClick={handleTrueFav}>🤍</button>
       )}
 
       <button onClick={onClose} className={styles.close}>

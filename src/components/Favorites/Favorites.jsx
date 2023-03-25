@@ -10,7 +10,7 @@ const Favorites = () => {
     <div>
       {myFavorites.map((el) => {
         return (
-          <>
+          <div key={el.id}>
             <Link to={`/detail/${el.id}`}>
               <img src={el.image} alt="Avatar del personaje" />
               <h2>{el.name}</h2>
@@ -20,7 +20,7 @@ const Favorites = () => {
             <h2>{el.species}</h2>
             <h2>{el.gender}</h2>
             <h2>{el.status}</h2>
-          </>
+          </div>
         );
       })}
     </div>
