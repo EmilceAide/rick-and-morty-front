@@ -21,6 +21,9 @@ const NavBar = ({ onSearch, onGetRandom, logout }) => {
       <Link to="/home">
         <button className={styles.btn}> HOME </button>
       </Link>
+      <Link to="/favorites">
+        <button className={styles.btn}> FAVORITES </button>
+      </Link>
        <Link>
         <button className={styles.btn}>ABOUT</button >
       </Link>

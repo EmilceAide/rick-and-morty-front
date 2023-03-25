@@ -12,7 +12,7 @@
 
   box-shadow:
   inset 0 -3em 3em rgba(0,0,0,0.1),
-        0 0  0 2px  #e6faff,
+        0 0  0 1px  #00e728,
         0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 .title{
@@ -43,7 +43,15 @@
 .inputEmail{
     font-size: 1.2em;
     border-style: none;
-    border: 1px solid #6af1f8;
+    border: 1px solid #00e728;
+}
+.inputEmail:focus,
+.inputPass:focus{
+  outline: 1px solid #00e728;
+}
+.inputPass::placeholder,
+.inputEmail::placeholder {
+text-align: center;
 }
 /* .email{
 }

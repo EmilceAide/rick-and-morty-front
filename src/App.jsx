@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar/NavBar.jsx";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import FormLogin from "./components/Form/FormLogin";
+import Favorite from "./components/Favorites/Favorites";
 // import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
         ></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/detail/:id" element={<Detail url={url} />}></Route>
+        <Route path="/favorites" element={<Favorite />}></Route>
       </Routes>
       {/* <Footer/> */}
     </div>
