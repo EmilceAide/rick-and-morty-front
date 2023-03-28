@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Card from "../Card/Card";
 import styles from "./pagination.module.css";
 
-function Pagination({ data, itemsPerPage, pagesToShow, onClose }) {
+function Pagination({ data, itemsPerPage, pagesToShow, onClose, isLoading }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -26,17 +26,20 @@ function Pagination({ data, itemsPerPage, pagesToShow, onClose }) {
       <div className={styles.containerCards}>
         {currentData.map((element) => (
           <Card
-            key={element.id}
-            id={element.id}
-            name={element.name}
-            status={element.status}
-            species={element.species}
-            gender={element.gender}
-            origin={element.origin.name}
-            image={element.image}
-            onClose={() => onClose(element.id)}
+          key={element.id}
+          id={element.id}
+          name={element.name}
+          status={element.status}
+          species={element.species}
+          gender={element.gender}
+          origin={element.origin.name}
+          image={element.image}
+          onClose={() => onClose(element.id)}
           />
-        ))}
+          ))}
+          {isLoading && (
+            <div className={styles.loader}></div>
+          )}
       </div>
     </div>
   );

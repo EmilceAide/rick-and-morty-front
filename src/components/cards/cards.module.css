@@ -1,3 +1,4 @@
+
 .container {
   width: 80%;
   min-height: calc(100vh - 100px);
@@ -7,4 +8,10 @@
   align-content: start;
   background: rgba(5, 7, 12, 0.5);
   padding: 0 0 0 20px;;
+}
+@media only screen and (max-width: 740px) and (min-width: 360px)  {
+  .container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+  }
 }

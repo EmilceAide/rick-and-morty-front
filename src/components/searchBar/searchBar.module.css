@@ -32,8 +32,8 @@
   margin: 0;
 }
 .btn:hover {
-  transform: rotate(360deg);
-  transition: all 0.5s;
+  transform: rotate(-180deg);
+  transition: all 0.1s;
   background-color: #cccc00;
   border: 1px solid #cccc00;
   font-size: 1.9em;

@@ -14,7 +14,8 @@ import { getCharacter, url } from "./service/axios";
 function App() {
   const location = useLocation();
   const navigate = useNavigate();
-
+  
+  const [isLoading, setIsLoading] = useState(false);
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
 
@@ -48,14 +49,17 @@ function App() {
   };
 
   const onSearch = (id) => {
+    setIsLoading(true);
     getCharacter(id)
       .then(({ data }) => {
         const idChar = characters.map((el) => el.id);
         if (data.id) {
           if (!idChar.includes(data.id)) {
             setCharacters((oldChars) => [...oldChars, data]);
+            setIsLoading(false)
           } else {
             alert(`¡Ya tienes el personaje con id: ${data.id}!`);
+            setIsLoading(false)
           }
         }
       })
@@ -74,7 +78,7 @@ function App() {
       <Routes>
         <Route
           path="/home"
-          element={<Cards characters={characters} onClose={onClose} />}
+          element={<Cards characters={characters} onClose={onClose} isLoading={isLoading} />}
         ></Route>
         <Route
           path="/detail/:id"

@@ -2,7 +2,7 @@
 import styles from "./cards.module.css";
 import Pagination from '../Pagination/Pagination'
 
-const Cards = ({ characters, onClose }) => {
+const Cards = ({ characters, onClose, isLoading}) => {
 
 
   if (characters.length === 0) {
@@ -30,7 +30,7 @@ const Cards = ({ characters, onClose }) => {
 
   return (
     <div className={styles.container}>
-  <Pagination data={characters} itemsPerPage={8} pagesToShow={5} onClose={onClose} />
+  <Pagination data={characters} itemsPerPage={8} pagesToShow={5} onClose={onClose} isLoading={isLoading} />
 
     </div>
   );
