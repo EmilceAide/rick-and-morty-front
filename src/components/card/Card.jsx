@@ -15,19 +15,19 @@ const Card = ({
   onClose,
 }) => {
   const dispatch = useDispatch();
-  const {myFavorites}= useSelector(state => state)
+  const { myFavorites } = useSelector((state) => state);
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavorite = () => {
     if (isFavorite) {
-      console.log(isFavorite)
+      console.log(isFavorite);
       setIsFavorite(false);
       dispatch(deleteFavorite(id));
-    } 
+    }
   };
 
-  const handleTrueFav =() =>{
-  if(!isFavorite){
+  const handleTrueFav = () => {
+    if (!isFavorite) {
       setIsFavorite(true);
       dispatch(
         addFavorite({
@@ -42,35 +42,45 @@ const Card = ({
         })
       );
     }
-  }
+  };
 
   useEffect(() => {
-   myFavorites.map((fav) => {
-      if(fav.id === id) {
-         setIsFavorite(true);
+    myFavorites.map((fav) => {
+      if (fav.id === id) {
+        setIsFavorite(true);
       }
-   });
-}, [myFavorites]);
+    });
+  }, [myFavorites]);
 
   return (
     <div className={styles.container}>
-      {isFavorite ? (
-        <button onClick={handleFavorite}>❤️</button>
-      ) : (
-        <button onClick={handleTrueFav}>🤍</button>
-      )}
-
-      <button onClick={onClose} className={styles.close}>
-        X
-      </button>
-      <Link to={`/detail/${id}`}>
+      <div className={styles.info}>
+        <h3 className={styles.id}> {id} </h3>
+        <button onClick={onClose} className={styles.close}>
+          X
+        </button>
+      </div>
+      <div className={styles.center}>
         <img src={image} alt="Avatar del personaje" className={styles.image} />
-        <h2 className={styles.name}>{name}</h2>
-      </Link>
-      {/* <h2 className={styles.origin}>{origin}</h2> */}
-      {/* <h2 className={styles.species}>{species}</h2>
-         <h2 className={styles.gender}>{gender}</h2>
-         <h2 className={styles.status}>{status}</h2> */}
+        <div className={styles.containerName}>
+          <p className={styles.name}>{name}</p>
+        </div>
+      </div>
+
+      <div className={styles.accions}>
+        {isFavorite ? (
+          <button onClick={handleFavorite} className={styles.btn}>
+            ❤️
+          </button>
+        ) : (
+          <button onClick={handleTrueFav} className={styles.btn}>
+            🤍
+          </button>
+        )}
+        <Link to={`/detail/${id}`}>
+          <button className={styles.detail}>{` + `} </button>
+        </Link>
+      </div>
     </div>
   );
 };

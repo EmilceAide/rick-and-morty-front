@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+
 import "./App.css";
-import Cards from "./components/Cards/Cards.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import FormLogin from "./components/Form/FormLogin";
 import Favorite from "./components/Favorites/Favorites";
+import Cards from "./components/Cards/Cards";
+import { getCharacter, url } from "./service/axios";
 // import Footer from "./components/Footer/Footer";
 
 function App() {
-  const url = "https://rickandmortyapi.com/api/character";
   const location = useLocation();
   const navigate = useNavigate();
 
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
+
   const EMAIL = "emi@gmail.com";
   const PASSWORD = "Pass123!";
 
@@ -35,9 +36,19 @@ function App() {
     !access && navigate("/");
   }, [access]);
 
+  const onClose = (id) => {
+    setCharacters((oldChars) => oldChars.filter((el) => el.id !== id));
+  };
+
+  const onGetRandom = (min, max, cb) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    const ramdom = Math.floor(Math.random() * (max - min) + min);
+    return cb(ramdom);
+  };
+
   const onSearch = (id) => {
-    axios
-      .get(`${url}/${id}`)
+    getCharacter(id)
       .then(({ data }) => {
         const idChar = characters.map((el) => el.id);
         if (data.id) {
@@ -53,17 +64,6 @@ function App() {
       });
   };
 
-  const onClose = (id) => {
-    setCharacters((oldChars) => oldChars.filter((el) => el.id !== id));
-  };
-
-  const onGetRandom = (min, max, cb) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    const ramdom = Math.floor(Math.random() * (max - min) + min);
-    return cb(ramdom);
-  };
-
   return (
     <div className="App">
       {location.pathname === "/" ? (
@@ -76,11 +76,14 @@ function App() {
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}
         ></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/detail/:id" element={<Detail url={url} />}></Route>
+        <Route
+          path="/detail/:id"
+          element={<Detail getCharacter={getCharacter} />}
+        ></Route>
         <Route path="/favorites" element={<Favorite />}></Route>
+        <Route path="/about" element={<About />}></Route>
       </Routes>
-      {/* <Footer/> */}
+      {/* {location.pathname !== "/" && <Footer />} */}
     </div>
   );
 }

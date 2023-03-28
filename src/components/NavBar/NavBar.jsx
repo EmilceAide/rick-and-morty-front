@@ -6,32 +6,33 @@ import styles from "./navBar.module.css";
 const NavBar = ({ onSearch, onGetRandom, logout }) => {
   return (
     <div className={styles.container}>
-
       <div className={styles.contentOne}>
+        <Link to="/home">
+          <button className={styles.home}> HOME </button>
+        </Link>
+        <Link to="/favorites">
+          <button className={styles.favorites}> FAVORITES </button>
+        </Link>
+        <Link to="/about">
+          <button className={styles.about}> ABOUT </button>
+        </Link>
+        <SearchBar onSearch={onSearch} />
       </div>
 
       <div className={styles.contentTwo}>
-      <button
-        onClick={() => onGetRandom(1, 826, onSearch)}
-        className={styles.btnRandom}
+        <button
+          onClick={() => onGetRandom(1, 826, onSearch)}
+          className={styles.btnRandom}
         >
-        Agregar
-      </button>
-      <SearchBar onSearch={onSearch} />
-      <Link to="/home">
-        <button className={styles.btn}> HOME </button>
-      </Link>
-      <Link to="/favorites">
-        <button className={styles.btn}> FAVORITES </button>
-      </Link>
-       <Link>
-        <button className={styles.btn}>ABOUT</button >
-      </Link>
-      <Link to="/">
-      <button onClick={logout} className={styles.btn}> CERRAR SESION </button>
-      </Link>
+          {"+"}
+        </button>
+        <Link to="/">
+          <button onClick={logout} className={styles.logout}>
+            {" "}
+            LOGOUT{" "}
+          </button>
+        </Link>
       </div>
-        
     </div>
   );
 };

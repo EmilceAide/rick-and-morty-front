@@ -1,10 +1,28 @@
+.containerOne {
+  width: 80%;
+  padding: 0 10px;
+  min-height: calc(100vh - 200px);
+  background: rgba(5, 7, 12, 0.5);
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  align-content: start;
+  width: 100%;
+}
+.containerOptions{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
 .container {
   background: linear-gradient(rgba(5, 7, 1, 0.75), rgba(5, 7, 12, 0.75)),
     url("./../../assets/cardsFondo.avif");
 
   width: 12em;
-  height: 15em;
-  border: 5px solid #c2fe2a;
+  height: 14.5em;
+  border: 5px solid #00bfff;
   border-radius: 3%;
   display: flex;
   flex-direction: column;
@@ -37,10 +55,10 @@ a:active {
 }
 .close {
   cursor: pointer;
-  border: 1px solid #c2fe2a;
+  border: 1px solid #00bfff;
   border-radius: 5%;
   font-weight: bold;
-  background-color: #c2fe2a;
+  background-color: #00bfff;
   width: 2em;
   height: 2em;
 }
@@ -74,6 +92,12 @@ a:active {
   transform: scale(1.1);
   border: 5px solid #000;
 }
+
+.containerName {
+  justify-self: center;
+  padding: 0;
+}
+
 .containerName {
   justify-self: center;
   padding: 0;
@@ -88,23 +112,11 @@ a:active {
 .accions {
   display: flex;
   justify-content: space-between;
-  background-color: #c2fe2a;
+  background-color: #00bfff;
   padding: 5%;
+  margin-bottom: 0;
 }
 
-.btn {
-  color: #000;
-  background: none;
-  border: 0;
-  color: inherit;
-  font: inherit;
-  line-height: normal;
-  overflow: visible;
-  padding: 0;
-  cursor: pointer;
-  width: 2em;
-  height: 2em;
-}
 .detail {
   background: linear-gradient(180deg, #ffcc00 0%, #cca300 100%);
   transition: all 0.3s;
@@ -116,4 +128,7 @@ a:active {
   background: linear-gradient(180deg, #cca300 0%, #ffcc00 100%);
   transition: all 0.3s;
   cursor: pointer;
+}
+.gender {
+  font-size: 1px;
 }

@@ -1,0 +1,36 @@
+.container {
+    min-height: calc(100vh - 200px);
+    width: 100%;
+  }
+  .containerCards{
+    margin-top:10px;
+    min-height: calc(100vh - 200px);
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: start;
+  }
+  .pagination{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .btnNumber{
+    background-color: #a2a203;
+    border: 1px solid #34340f;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Bebas Neue";
+    line-height: normal;
+    overflow: visible;
+    font-size: 1.2em;
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0 5px 0 0;
+  }
+  .btnNumber:hover{
+    background-color: #ebeb43;
+    border: 1px solid #34340f;
+    color: #fffefe;
+  }

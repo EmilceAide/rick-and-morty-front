@@ -1,48 +1,84 @@
-.container{
+.container {
   width: 25%;
-  height: 90%;
-  margin: 0 auto ;
-  border: 5px solid #00bfff;
+  height: 100%;
+  margin-top: 5%;
+  border: 10px solid #0c2c1b;
   border-radius: 5%;
-  background-color: aliceblue;
-  padding: 0 20px;
+  background: linear-gradient(rgba(5, 7, 1, 0.75), rgba(5, 7, 12, 0.75)),
+    url("./../../assets/detail1.jpg");
+  padding: 0 5%;
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-areas: 
-  "name name"
-  "image origin"
-  "image species"
-  "status gender";
+  grid-template-areas:
+    "name id"
+    "image info"
+    "image info"
+    "origin location";
 }
-.image{
-    grid-area: image;
-    width: 60%;
-    border-radius: 30%;
-    border: 3px solid #000;
+.info {
+  justify-self: center;
+  grid-area: info;
+  color: #fff;
+  padding: 10px;
 }
-.origin{
-    grid-area: origin;
-    font-family: "Delicious Handrawn";
-    font-size: 1.5em;
+.id {
+  grid-area: id;
+  font-family: "Bebas Neue";
+  font-size: 2em;
+  text-align: center;
+  justify-self: end;
+  border: 1px solid #00e728;
+  background: linear-gradient(180deg, #00e728 0%, #1c8b2f 100%);
+  transition: all 0.3s;
+  width: 2em;
+  height: 1.1em;
 }
-.species{
-    grid-area: species;
-    font-family: "Delicious Handrawn";
-    font-size: 1.5em;
+.name {
+  grid-area: name;
+  color: #fff;
+  font-family: "Bebas Neue";
+  font-size: 2em;
+  justify-self: start;
+  margin: 0 0 20px 0;
 }
-.gender{
-    grid-area: gender;
-    font-family: "Delicious Handrawn";
-    font-size: 1.5em;
+.image {
+  grid-area: image;
+  width: 80%;
+  border: 6px solid #000;
+  margin: 0 0 15px 0;
 }
-.name{
-    grid-area: name;
-    font-family: "Bebas Neue";
-    font-size: 2em;
+.origin {
+  grid-area: origin;
+  color: #fff;
+  font-family: "Delicious Handrawn";
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0 0 15px 0;
 }
-.status{
-    grid-area: status;
-    font-family: "Delicious Handrawn";
-    font-size: 1.5em;
+.species {
+  grid-area: species;
+  font-family: "Delicious Handrawn";
+  font-size: 1.5em;
+  margin: 0 0 15px 0;
+}
+.gender {
+  grid-area: gender;
+  font-family: "Delicious Handrawn";
+  font-size: 1.5em;
+  margin: 0 0 15px 0;
+}
+.status {
+  grid-area: status;
+  font-family: "Delicious Handrawn";
+  font-size: 1.5em;
+}
+
+.location {
+  grid-area: location;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Delicious Handrawn";
+  font-size: 1.5em;
+  margin: 0 0 15px 0;
 }

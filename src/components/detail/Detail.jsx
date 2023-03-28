@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+
 import styles from "./detail.module.css";
 
-const Detail = ({ url }) => {
+const Detail = ({ getCharacter }) => {
   const { id } = useParams();
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    axios
-      .get(`${url}/${id}`)
+    getCharacter(id)
       .then(({ data }) => {
         if (data.id) {
           setCharacter(data);
@@ -29,11 +29,14 @@ const Detail = ({ url }) => {
         className={styles.image}
       />
       <p className={styles.name}>{character.name}</p>
-      <p className={styles.origin}>Origen: {character.origin?.name}</p>
-      <p className={styles.species}>Especie: {character.species}</p>
-      <p className={styles.gender}>Género: {character.gender}</p>
-      <p className={styles.status}>Estado: {character.status}</p>
-      {/* <p>{character.location?.name} className={styles.location}</p> */}
+      <p className={styles.id}>{character.id}</p>
+      <div className={styles.info}>
+        <p className={styles.species}>Specie: {character.species}</p>
+        <p className={styles.gender}>Gender: {character.gender}</p>
+        <p className={styles.status}>Status: {character.status}</p>
+      </div>
+      <p className={styles.origin}>Origin: {character.origin?.name}</p>
+      <p className={styles.location}>Location: {character.location?.name} </p>
     </div>
   );
 };

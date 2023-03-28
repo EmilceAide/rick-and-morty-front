@@ -14,10 +14,10 @@ const SearchBar = ({ onSearch }) => {
         onChange={handleChange}
         type="search"
         className={styles.inputSearch}
-        placeholder="  id de tu personaje"
+        placeholder="id"
       />
-      <button onClick={() => onSearch(id)} className={styles.btnSearch}>
-        Agregar
+      <button onClick={() => onSearch(id)} className={styles.btn}>
+        {"+"}
       </button>
     </div>
   );

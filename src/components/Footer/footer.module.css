@@ -1,0 +1,27 @@
+.container {
+  background-color: black;
+  height: 100px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+}
+.text {
+  color: #fff;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  padding: 3% 0;
+}
+.btn {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  color: #fff;
+  margin: 0;
+}

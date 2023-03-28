@@ -1,16 +1,41 @@
-.btnSearch {
-  background-color: #04698a;
-  border-radius: 5%;
-  font-size: 1.2em
-}
-.btnSearch:hover{
-  background-color: #00bfff
-}
 .containerSearch {
   grid-area: containerSearch;
+  display: flex;
+  justify-content: center;
+  margin-left: 2%;
 }
 .inputSearch {
   font-size: 1.2em;
   border-style: none;
-  border: 1px solid #727778;
+  border: 1px solid #dce6e8;
+  width: 70px;
+  height: 1.8em;
+  margin: 0;
+  text-align: center;
+}
+.inputSearch:focus {
+  outline: 0;
+  background: rgba(227, 231, 246, 0.954);
+}
+.btn {
+  background-color: #a2a203;
+  border: 1px solid #a2a203;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Bebas Neue";
+  line-height: normal;
+  overflow: visible;
+  font-size: 1.8em;
+  padding: 0;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0;
+}
+.btn:hover {
+  transform: rotate(360deg);
+  transition: all 0.5s;
+  background-color: #cccc00;
+  border: 1px solid #cccc00;
+  font-size: 1.9em;
+  color: #fff;
 }
