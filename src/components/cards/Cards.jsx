@@ -1,4 +1,3 @@
-// import Card from "../Card/Card";
 import styles from "./cards.module.css";
 import Pagination from '../Pagination/Pagination'
 
