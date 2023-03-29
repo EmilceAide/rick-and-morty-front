@@ -3,7 +3,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import "./App.css";
 import NavBar from "./components/NavBar/NavBar.jsx";
-import About from "./components/About/About";
+// import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import FormLogin from "./components/Form/FormLogin";
 import Favorite from "./components/Favorites/Favorites";
@@ -85,7 +85,7 @@ function App() {
           element={<Detail getCharacter={getCharacter} />}
         ></Route>
         <Route path="/favorites" element={<Favorite />}></Route>
-        <Route path="/about" element={<About />}></Route>
+        {/* <Route path="/about" element={<About />}></Route> */}
       </Routes>
       {/* {location.pathname !== "/" && <Footer />} */}
     </div>
