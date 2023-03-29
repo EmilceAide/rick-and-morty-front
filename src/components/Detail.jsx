@@ -8,7 +8,7 @@ const Detail = ({ getCharacter }) => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    getCharacter()
+    getCharacter(id)
       .then(({ data }) => {
         if (data.id) {
           setCharacter(data);
