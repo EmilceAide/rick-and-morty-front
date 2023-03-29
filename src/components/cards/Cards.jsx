@@ -1,5 +1,5 @@
 import styles from "./cards.module.css";
-import Pagination from '../Pagination/Pagination'
+import Pagination from '../pagination/Pagination'
 
 const Cards = ({ characters, onClose, isLoading}) => {
 
