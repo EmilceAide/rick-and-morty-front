@@ -8,7 +8,7 @@ import Detail from "./components/Detail/Detail";
 import FormLogin from "./components/Form/FormLogin";
 import Favorite from "./components/Favorites/Favorites";
 import Cards from "./components/Cards/Cards";
-import { getCharacter, url } from "./service/axios";
+import { getCharacter} from "./service/axios";
 // import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -34,8 +34,8 @@ function App() {
   }
 
   useEffect(() => {
-    !access && navigate("/");
-  }, [access]);
+  access && navigate("/") 
+  }, [access, navigate]);
 
   const onClose = (id) => {
     setCharacters((oldChars) => oldChars.filter((el) => el.id !== id));

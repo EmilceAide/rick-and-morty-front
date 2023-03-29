@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import styles from "./detail.module.css";
@@ -9,7 +8,7 @@ const Detail = ({ getCharacter }) => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    getCharacter(id)
+    getCharacter()
       .then(({ data }) => {
         if (data.id) {
           setCharacter(data);
@@ -19,7 +18,7 @@ const Detail = ({ getCharacter }) => {
         alert("No hay personajes con ese ID");
       });
     return setCharacter({});
-  }, [id]);
+  }, [getCharacter, id]);
 
   return (
     <div className={styles.container}>

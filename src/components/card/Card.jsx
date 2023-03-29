@@ -45,13 +45,14 @@ const Card = ({
   };
 
   useEffect(() => {
-    myFavorites.map((fav) => {
-      if (fav.id === id) {
+    myFavorites.map((el) => {
+      if(el.id === id) {
         setIsFavorite(true);
       }
+      return null; 
     });
-  }, [myFavorites]);
-
+  }, [myFavorites, id]);
+  
   return (
     <div className={styles.container}>
       <div className={styles.info}>
