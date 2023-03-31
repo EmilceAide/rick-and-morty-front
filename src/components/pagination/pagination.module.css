@@ -34,12 +34,13 @@
     border: 1px solid #34340f;
     color: #fffefe;
   }
+
   .loader {
-    border: 16px solid #d0e0c5;
-    border-top: 16px solid #77db34;
+    border: 6px solid #d0e0c5;
+    border-top: 6px solid #77db34;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 30px;
+    height: 30px;
     animation: spin 2s linear infinite;
   }
   

@@ -38,7 +38,9 @@ function Pagination({ data, itemsPerPage, pagesToShow, onClose, isLoading }) {
           />
           ))}
           {isLoading && (
+            <div className={styles.isLoading}>
             <div className={styles.loader}></div>
+            </div>
           )}
       </div>
     </div>
