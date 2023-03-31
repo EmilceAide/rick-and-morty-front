@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 
 import "./App.css";
-import NavBar from "./components/NavBar.jsx";
-import About from "./components/About";
-import Detail from "./components/Detail";
-import FormLogin from "./components/FormLogin";
-import Favorite from "./components/Favorites";
-import Cards from "./components/Cards";
+import NavBar from "./components/navBar/NavBar.jsx";
+import About from "./components/about/About";
+import Detail from "./components/detail/Detail";
+import FormLogin from "./components/form/FormLogin";
+import Favorite from "./components/favorites/Favorites";
+import Cards from "./components/cards/Cards";
 import { getCharacter} from "./service/axios";
 // import Footer from "./components/Footer/Footer";
 

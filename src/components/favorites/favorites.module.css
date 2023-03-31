@@ -18,7 +18,7 @@
 }
 .container {
   background: linear-gradient(rgba(5, 7, 1, 0.75), rgba(5, 7, 12, 0.75)),
-    url("./../assets/cardsFondo.avif");
+    url("../../assets/cardsFondo.avif");
 
   width: 12em;
   height: 14.5em;

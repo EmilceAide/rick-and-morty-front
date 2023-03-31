@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/Rick-And-Morty-Free-Picture-PNG.png";
-import title from "../assets/rickandmorty.png";
-import { validation } from "../models/validation";
+import logo from "../../assets/Rick-And-Morty-Free-Picture-PNG.png";
+import title from "../../assets/rickandmorty.png";
+import { validation } from "../../models/validation";
 import styles from "./formLogin.module.css";
 
 const FormLogin = ({ login }) => {

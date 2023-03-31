@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from "./Card";
+import Card from "../card/Card";
 import styles from "./pagination.module.css";
 
 function Pagination({ data, itemsPerPage, pagesToShow, onClose, isLoading }) {
