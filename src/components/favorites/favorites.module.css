@@ -1,19 +1,12 @@
 .containerOne {
-  height: 100vh;
-  width: 80%;
-  padding: 0 10px;
-  min-height: calc(100vh - 200px);
-  background: rgba(5, 7, 12, 0.5);
   display: flex;
   flex-direction: column;
  align-content: flex-start ;
 }
 .gridContainer {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  align-content: start;
-  width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
 }
 .containerOptions{
   display: flex;
@@ -135,4 +128,20 @@ a:active {
 }
 .gender {
   font-size: 1px;
+}
+@media (min-width: 1200px) {
+  .gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: start;
+    width: 100%;
+  }
+  .containerOne {
+    height: 100vh;
+    width: 80%;
+    padding: 0 10px;
+    min-height: calc(100vh - 200px);
+    background: rgba(5, 7, 12, 0.5);
+  }
 }

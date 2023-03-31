@@ -1,16 +1,19 @@
-.container {
-  width: 80%;
-  min-height: calc(100vh - 100px);
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  align-content: start;
-  background: rgba(5, 7, 12, 0.5);
-  padding: 0 0 0 20px;;
+.container{
+  display: flex;
+  flex-direction: column;
+  
 }
-@media only screen and (max-width: 740px) and (min-width: 360px)  {
+
+@media (min-width: 1200px) {
   .container{
+    width: 80%;
+    min-height: calc(100vh - 100px);
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: start;
+    background: rgba(5, 7, 12, 0.5);
+    padding: 0 0 0 20px;
   }
+
 }

@@ -6,6 +6,7 @@ import styles from "./navBar.module.css";
 const NavBar = ({ onSearch, onGetRandom, logout }) => {
   return (
     <div className={styles.container}>
+
       <div className={styles.contentOne}>
         <Link to="/home">
           <button className={styles.home}> HOME </button>
@@ -16,7 +17,9 @@ const NavBar = ({ onSearch, onGetRandom, logout }) => {
         <Link to="/about">
           <button className={styles.about}> ABOUT </button>
         </Link>
+        <div className={styles.search}>
         <SearchBar onSearch={onSearch} />
+        </div>
       </div>
 
       <div className={styles.contentTwo}>
