@@ -82,3 +82,8 @@
   font-size: 1.5em;
   margin: 0 0 15px 0;
 }
+@media (min-width: 360px) and (max-width: 819px){
+  .container {
+    width: 80%;
+  }
+}
