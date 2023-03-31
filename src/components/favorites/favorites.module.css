@@ -1,8 +1,12 @@
 .containerOne {
+  height: 100vh;
   width: 80%;
   padding: 0 10px;
   min-height: calc(100vh - 200px);
   background: rgba(5, 7, 12, 0.5);
+  display: flex;
+  flex-direction: column;
+ align-content: flex-start ;
 }
 .gridContainer {
   display: grid;
@@ -14,7 +18,7 @@
 .containerOptions{
   display: flex;
   justify-content: center;
-  margin: 20px;
+  padding: 10px;
 }
 .container {
   background: linear-gradient(rgba(5, 7, 1, 0.75), rgba(5, 7, 12, 0.75)),
