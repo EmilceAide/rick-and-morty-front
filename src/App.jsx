@@ -8,7 +8,7 @@ import Detail from "./components/detail/Detail";
 import FormLogin from "./components/form/FormLogin";
 import Favorite from "./components/favorites/Favorites";
 import Cards from "./components/cards/Cards";
-import { getCharacter} from "./service/axios";
+import { getCharacterOnSearch, getCharacter} from "./service/axios";
 // import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -50,7 +50,7 @@ function App() {
 
   const onSearch = (id) => {
     setIsLoading(true);
-    getCharacter(id)
+    getCharacterOnSearch(id)
       .then(({ data }) => {
         const idChar = characters.map((el) => el.id);
         if (data.id) {

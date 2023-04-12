@@ -29,7 +29,7 @@ const Cards = ({ characters, onClose, isLoading}) => {
 
   return (
     <div className={styles.container}>
-  <Pagination data={characters} itemsPerPage={8} pagesToShow={5} onClose={onClose} isLoading={isLoading} />
+  <Pagination characters={characters} itemsPerPage={8} pagesToShow={5} onClose={onClose} isLoading={isLoading} />
 
     </div>
   );

@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import Card from "../card/Card";
 import styles from "./pagination.module.css";
 
-function Pagination({ data, itemsPerPage, pagesToShow, onClose, isLoading }) {
+function Pagination({ characters, itemsPerPage, pagesToShow, onClose, isLoading }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentData = data.slice(indexOfFirstItem, indexOfLastItem);
+  const currentData = characters.slice(indexOfFirstItem, indexOfLastItem);
+  console.log('currentData', currentData)
 
   const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(data.length / itemsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(characters.length / itemsPerPage); i++) {
     pageNumbers.push(i);
   }
 
@@ -29,11 +30,11 @@ function Pagination({ data, itemsPerPage, pagesToShow, onClose, isLoading }) {
           key={element.id}
           id={element.id}
           name={element.name}
-          status={element.status}
-          species={element.species}
-          gender={element.gender}
-          origin={element.origin.name}
           image={element.image}
+          gender={element.gender}
+          species={element.species}
+          // status={element.status}
+          // origin={element.origin.name}
           onClose={() => onClose(element.id)}
           />
           ))}
